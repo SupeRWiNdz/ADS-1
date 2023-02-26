@@ -10,7 +10,7 @@ bool checkPrime(uint64_t value) {
  return true;}
 
 uint64_t nPrime(uint64_t n) {
- int currentNumber = 0, primeFound = 0;
+ uint64_t currentNumber = 0, primeFound = 0;
  while (primeFound < n)
  {if (checkPrime(currentNumber))
   primeFound++;
@@ -18,13 +18,13 @@ uint64_t nPrime(uint64_t n) {
  return currentNumber - 1;}
 
 uint64_t nextPrime(uint64_t value) {
- int currentNumber = value + 1;
+ uint64_t currentNumber = value + 1;
  while (checkPrime(currentNumber) == false)
  currentNumber++;
  return currentNumber;}
 
 uint64_t sumPrime(uint64_t hbound) {
- int sum = 0, currentPrime = 2;
+ uint64_t sum = 0, currentPrime = 2;
  while (currentPrime < hbound)
  {sum += currentPrime;
  currentPrime = nextPrime(currentPrime);}
